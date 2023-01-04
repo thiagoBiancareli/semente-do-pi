@@ -1,0 +1,118 @@
+/* zerar o css */
+
+* {
+    box-sizing: border-box;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Header.... fundo amarelo de fora a fora com 60px de altura. O conteúdo dele guarda 100px de distância das laterais*/
+header{
+    background-color: #333;
+    height: 60px;
+}
+
+header div{
+    margin: 0 100px;
+    height: 100%;
+    display: flex;
+    background-color: rgb(57, 56, 56);
+    /*gap: 10px; espaços entre elementos*/
+}
+
+header div a{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    text-decoration: none; /*tira o sublinhado*/
+    color: #fff;
+}
+
+header div a:hover{ /*Hover funciona quando o úsuario passa o mouse sobre o link*/
+    background-color: rgb(74, 74, 74);
+    color: #333;
+}
+
+header div a:last-child{
+    margin-left: auto;/*Seleciona o último <a> first child o primeniro e nth child(3) o terceiro <a>*/
+}
+
+/* main... fundo rosa, tambem de fora a fora
+mas o conteúdo dele ficará centralizado à uma distância de 100px das laterais e 50px do topo e do fundo */
+
+/*
+footer.... fundo amarelo de fora a fora com 60px de altura
+*/
+
+/*main fundo rosa de fora a fora, mas o conteúde dele ficara a uma distancia de 20px do top e bottom e 100px do left e right*/
+
+main {
+    padding: 20px 100px;
+    display: grid;
+    grid-template-areas: "aside header anuncio "
+                         "aside section anuncio"
+                         "aside footer anuncio";
+
+    grid-template-columns: 200px 1fr 100px;
+}
+
+main > aside.esquerdo {
+    grid-area: aside;
+}
+
+main > header {
+    grid-area: header;
+}
+
+main > section {
+    grid-area: section;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+}
+
+main > section > article {
+    position: relative;
+}
+
+main > section > article > img {
+    width: 100%;
+    height: 1fr;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+main > section > article > h2 {
+    margin: 10px 0;
+}
+
+main > section > article > .tamanho {
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+}
+
+main > section > article > .preco {
+    font-size: 1.5rem;
+}
+
+main > footer {
+    grid-area: footer;
+}
+
+main > aside.direito {
+    grid-area: anuncio;
+}
+
+main * {
+    /*border: 1px solid #333;*/
+}
